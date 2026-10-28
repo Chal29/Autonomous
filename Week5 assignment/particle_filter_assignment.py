@@ -1,9 +1,9 @@
 """Week 5, Assignment 4: reproducible experiments Q1-Q6.
 
 Install: pip install numpy matplotlib
-Examples: python particle_filter_assignment4.py --experiment q1
-          python particle_filter_assignment4.py --experiment q4 --seed 0
-          python particle_filter_assignment4.py --M 2000 --sigr 0.05 --lm 2
+Examples: python particle_filter_assignment.py --experiment q1
+          python particle_filter_assignment.py --experiment q4 --seed 0
+          python particle_filter_assignment.py --M 2000 --sigr 0.05 --lm 2
 
 Baseline matches the supplied Python example: measurement-only weights each step.
 --weight-mode recursive for a sequential importance filter when resampling is skipped.
