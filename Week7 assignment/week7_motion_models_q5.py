@@ -1,5 +1,5 @@
 """Week7 Assignment , Question 5: velocity-model likelihood vs Monte Carlo poses.
-Uses the same variance convention and parameters as the earlier Q5 script.
+Uses the squared-velocity variance convention in the professor's lecture.
 The Table 5.1 score is a relative likelihood, not a normalized pose density.
 """
 import numpy as np
@@ -11,9 +11,9 @@ def wrap(a):
     return (a + np.pi) % (2 * np.pi) - np.pi
 
 def noise_variances(v, w, alpha):
-    return (alpha[0]*abs(v) + alpha[1]*abs(w),
-            alpha[2]*abs(v) + alpha[3]*abs(w),
-            alpha[4]*abs(v) + alpha[5]*abs(w))
+    return (alpha[0]*v**2 + alpha[1]*w**2,
+            alpha[2]*v**2 + alpha[3]*w**2,
+            alpha[4]*v**2 + alpha[5]*w**2)
 
 def gaussian(error, variance):
     return np.exp(-0.5 * np.asarray(error)**2 / variance) / np.sqrt(2*np.pi*variance)
@@ -85,7 +85,7 @@ def main():
     fig.colorbar(contour,ax=ax[2],label='Relative likelihood')
     fig.suptitle('Q5: Velocity motion model — Monte Carlo vs closed-form score',fontsize=13)
     fig.tight_layout()
-    fig.savefig('week7_q5_final_comparison.png',dpi=200)
+    fig.savefig('week7_q5_corrected_comparison.png',dpi=200)
 
     print('Monte Carlo samples:',n)
     print('Sample mean pose:',np.round(poses.mean(axis=0),4))
@@ -94,7 +94,7 @@ def main():
     print('Finite Table 5.1 evaluations:',int(np.isfinite(scores).sum()))
     print('Mean relative likelihood score:',round(float(np.nanmean(scores)),5))
     print('Samples in fixed-heading slice:',int(near_heading.sum()))
-    print('Saved: week7_q5_final_comparison.png')
+    print('Saved: week7_q5_corrected_comparison.png')
     plt.show()
 
 if __name__=='__main__':
