@@ -7,8 +7,6 @@ import matplotlib.pyplot as plt
 # Real Robot Odometry vs Ground Truth
 # ============================================================
 
-# 1. Load datasets
-# Change filenames if your CSV files have different names.
 
 odom = np.loadtxt(
     "Probabilistic-Robotics-Algorithms-master/0.Dataset1/Odometry.dat"

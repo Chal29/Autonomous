@@ -1,4 +1,4 @@
-"""Assignment 2 Q6: Map-aware motion model (lecture Eq. 6.9).
+"""Week7 Assignment  Q6: Map-aware motion model (lecture Eq. 6.9).
 Demonstrates why endpoint-only occupancy checks can miss wall crossings,
 and why checking intermediate states with smaller dt helps.
 Requires numpy and matplotlib.

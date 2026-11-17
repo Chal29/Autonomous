@@ -1,4 +1,4 @@
-"""Assignment 2, Question 5: velocity-model likelihood vs Monte Carlo poses.
+"""Week7 Assignment , Question 5: velocity-model likelihood vs Monte Carlo poses.
 Uses the same variance convention and parameters as the earlier Q5 script.
 The Table 5.1 score is a relative likelihood, not a normalized pose density.
 """

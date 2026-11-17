@@ -1,4 +1,4 @@
-"""Week 7 Assignment 2 - Question 3: Gaussian approximation checks.
+"""Week 7 Assignment  - Question 3: Gaussian approximation checks.
 Compatible with Python 3.6 and NumPy/Matplotlib. Run: py week7_motion_models_q3.py
 """
 import numpy as np

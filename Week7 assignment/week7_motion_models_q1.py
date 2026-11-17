@@ -1,5 +1,5 @@
-"""Week 7 Assignment 2, Question 1: velocity-model sample distributions.
-Based on Section 6.5 of the lecture screenshots. Run: python week7_motion_models_q1.py
+"""Week 7 Assignment , Question 1 and 2: velocity-model sample distributions.
+Based on Section 6.5 of the lecture. Run: python week7_motion_models_q1.py
 """
 import numpy as np
 import matplotlib.pyplot as plt
